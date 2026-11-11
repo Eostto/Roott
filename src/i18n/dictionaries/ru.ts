@@ -300,9 +300,12 @@ const ru: typeof ro = {
     related: "Сопутствующие товары:",
     linesTitle: "Линейки продукции ROOTT",
     priceNote: "Цены указаны в евро.",
+    priceOnRequest: "Цена по запросу",
+    priceOnRequestNote: "Цены и наличие уточняйте у менеджера.",
   },
 
   cart: {
+    noPrices: "Цены сообщит менеджер после отправки заказа.",
     title: "Корзина",
     clear: "Очистить",
     empty: "Ваша корзина пуста",
@@ -313,6 +316,7 @@ const ru: typeof ro = {
   },
 
   order: {
+    noPrices: "Цены сообщит менеджер после отправки заказа.",
     title: "Оформление заказа",
     contactTitle: "Контактные данные",
     name: "Имя и фамилия*",

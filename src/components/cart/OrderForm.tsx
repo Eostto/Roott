@@ -6,6 +6,7 @@ import { useState } from "react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { formatEur, useCart } from "./CartProvider";
+import { SHOW_PRICES } from "@/lib/company";
 
 const input = "w-full rounded-[5px] border border-[#e8e8e8] bg-white px-5 py-[14px] text-[14px] outline-none transition-colors focus:border-[#42454a]";
 
@@ -92,14 +93,18 @@ export default function OrderForm({ t, privacy, locale }: { t: Dictionary["order
                 <span className="block truncate text-[12px] font-light text-[#42454a]">{it.caption}</span>
               </span>
               <span className="text-[13px] text-[#42454a]">× {it.qty}</span>
-              <span className="w-[72px] text-right text-[14px]">{formatEur((it.price ?? 0) * it.qty, locale)}</span>
+              {SHOW_PRICES && <span className="w-[72px] text-right text-[14px]">{formatEur((it.price ?? 0) * it.qty, locale)}</span>}
             </li>
           ))}
         </ul>
-        <div className="mt-4 flex items-center justify-between border-t border-white pt-4">
-          <span className="text-[16px]">{t.total}</span>
-          <span className="text-[22px] font-semibold">{formatEur(cart.total, locale)}</span>
-        </div>
+        {SHOW_PRICES ? (
+          <div className="mt-4 flex items-center justify-between border-t border-white pt-4">
+            <span className="text-[16px]">{t.total}</span>
+            <span className="text-[22px] font-semibold">{formatEur(cart.total, locale)}</span>
+          </div>
+        ) : (
+          <p className="mt-4 border-t border-white pt-4 text-[13px] leading-5 text-[#42454a]">{t.noPrices}</p>
+        )}
         <button
           type="submit"
           disabled={state === "sending"}

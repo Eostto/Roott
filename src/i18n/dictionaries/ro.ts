@@ -298,9 +298,12 @@ const ro = {
     related: "Produse conexe:",
     linesTitle: "Liniile de produse ROOTT",
     priceNote: "Prețurile sunt afișate în euro.",
+    priceOnRequest: "Preț la cerere",
+    priceOnRequestNote: "Prețurile și disponibilitatea vi le comunică managerul la cerere.",
   },
 
   cart: {
+    noPrices: "Prețurile vă vor fi comunicate de manager după trimiterea comenzii.",
     title: "Coș",
     clear: "Golește",
     empty: "Coșul dvs. este gol",
@@ -311,6 +314,7 @@ const ro = {
   },
 
   order: {
+    noPrices: "Prețurile vă vor fi comunicate de manager după trimiterea comenzii.",
     title: "Plasarea comenzii",
     contactTitle: "Date de contact",
     name: "Nume și prenume*",

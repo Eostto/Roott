@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { formatEur, useCart } from "./CartProvider";
+import { SHOW_PRICES } from "@/lib/company";
 import { Close } from "../icons";
 
 export default function CartDrawer({ t, locale }: { t: Dictionary["cart"]; locale: Locale }) {
@@ -74,7 +75,7 @@ export default function CartDrawer({ t, locale }: { t: Dictionary["cart"]; local
                           +
                         </button>
                       </div>
-                      <span className="text-[15px]">{formatEur((it.price ?? 0) * it.qty, locale)}</span>
+                      {SHOW_PRICES && <span className="text-[15px]">{formatEur((it.price ?? 0) * it.qty, locale)}</span>}
                     </div>
                   </div>
                 </li>
@@ -84,10 +85,14 @@ export default function CartDrawer({ t, locale }: { t: Dictionary["cart"]; local
         </div>
 
         <div className="border-t border-mist px-6 pb-6 pt-4">
-          <div className="flex items-center justify-between text-[16px]">
-            <span>{t.total}</span>
-            <span className="text-[20px] font-semibold">{formatEur(total, locale) || "0 €"}</span>
-          </div>
+          {SHOW_PRICES ? (
+            <div className="flex items-center justify-between text-[16px]">
+              <span>{t.total}</span>
+              <span className="text-[20px] font-semibold">{formatEur(total, locale) || "0 €"}</span>
+            </div>
+          ) : (
+            <p className="text-[13px] leading-5 text-[#42454a]">{t.noPrices}</p>
+          )}
           <Link
             href={`/${locale}/order`}
             onClick={() => setOpen(false)}

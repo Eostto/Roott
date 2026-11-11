@@ -12,3 +12,6 @@ export const MESSENGERS = [
   { name: "WhatsApp", href: COMPANY.whatsapp },
   { name: "Telegram", href: COMPANY.telegram },
 ] as const;
+
+/** Afișarea prețurilor pe site (magazin, coș, comandă). false = „Preț la cerere”. */
+export const SHOW_PRICES = false;

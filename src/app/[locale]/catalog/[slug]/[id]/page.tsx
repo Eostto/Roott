@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { SHOW_PRICES } from "@/lib/company";
 import { allProducts, detailsHtml, formatPrice, getLine, getProduct, packagingHtml, pick } from "@/lib/catalog";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AddToCart from "@/components/shop/AddToCart";
@@ -66,7 +67,11 @@ export default async function ProductPage({ params }: { params: Params }) {
         <div className="px-4 pt-10 lg:max-w-[618px] lg:pl-[46px] lg:pr-4 lg:pt-[60px]">
           <div className="flex items-baseline justify-between gap-4">
             <h1 className="text-[26px] font-semibold leading-[30px]">{p.name}</h1>
-            {p.price != null && <div className="whitespace-nowrap text-right text-[16px] font-light leading-5">{formatPrice(p.price, locale)}</div>}
+            {SHOW_PRICES && p.price != null ? (
+              <div className="whitespace-nowrap text-right text-[16px] font-light leading-5">{formatPrice(p.price, locale)}</div>
+            ) : (
+              <div className="whitespace-nowrap text-right text-[15px] font-light leading-5 text-[#42454a]">{t.shop.priceOnRequest}</div>
+            )}
           </div>
           <div className="mb-[7px] mt-[17px] h-px bg-mist" />
 
@@ -104,7 +109,7 @@ export default async function ProductPage({ params }: { params: Params }) {
           )}
 
           <AddToCart
-            item={{ id: p.id, name: p.name, caption, price: p.price, image: p.thumb ?? p.image, href }}
+            item={{ id: p.id, name: p.name, caption, price: SHOW_PRICES ? p.price : null, image: p.thumb ?? p.image, href }}
             label={t.shop.addToCart}
             inCart={t.shop.inCart}
           />

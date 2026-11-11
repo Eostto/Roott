@@ -6,6 +6,7 @@ import { menu, pick, type Line, type LineItem } from "@/lib/catalog";
 import Breadcrumbs from "../Breadcrumbs";
 import ShopSidebar from "./ShopSidebar";
 import { hasLinePage } from "../legacy/LinePage";
+import { SHOW_PRICES } from "@/lib/company";
 
 function Item({ id, item, href, buy, wide }: { id: number; item: LineItem; href: string; buy: string; wide?: boolean }) {
   return (
@@ -131,7 +132,7 @@ export default function ShopLine({ line, locale, t }: { line: Line; locale: Loca
                 );
               return null;
             })}
-            <p className="text-[13px] font-light text-[#42454a]">{t.shop.priceNote}</p>
+            <p className="text-[13px] font-light text-[#42454a]">{SHOW_PRICES ? t.shop.priceNote : t.shop.priceOnRequestNote}</p>
           </div>
         </div>
       </section>

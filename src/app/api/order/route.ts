@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { SHOW_PRICES } from "@/lib/company";
 import { getProduct } from "@/lib/catalog";
 import { clean, storeLead } from "@/lib/leads";
 
@@ -22,7 +23,7 @@ export async function POST(req: Request) {
       (c.company ? `Clinică: ${c.company}\n` : "") + (c.city ? `Oraș: ${c.city}\n` : "") + (c.address ? `Adresă: ${c.address}\n` : "") +
       items.map((x) => `• ${x.name} (${x.line}) × ${x.qty} = ${x.sum} €`).join("\n") + `\nTotal: ${total} €` + (c.comment ? `\nComentariu: ${c.comment}` : "");
     await storeLead("order", { locale: clean(body.locale, 5), customer: c, items, total }, text);
-    return NextResponse.json({ ok: true, total });
+    return NextResponse.json(SHOW_PRICES ? { ok: true, total } : { ok: true });
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
