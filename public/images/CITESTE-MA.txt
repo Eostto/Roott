@@ -1,0 +1,6 @@
+Pozele site-ului sunt în public/images/roott/.
+Se descarcă de pe roott.ru cu comanda (din folderul proiectului):
+
+    node scripts/download-images.mjs
+
+Pentru a schimba o poză, înlocuiți fișierul cu același nume.

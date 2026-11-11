@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-open-sans), Arial, Helvetica, -apple-system, sans-serif;
+
+  --color-ink: #000000;
+  --color-navy: #101626;      /* bara de sus */
+  --color-slate: #2d3142;     /* banner ROOTT R, formular contact */
+  --color-mist: #f1f1f3;      /* fundal secțiuni deschise */
+  --color-paper: #f4f4f4;     /* bloc text SEO */
+  --color-coal: #222325;      /* footer */
+  --color-lime: #8edd65;      /* accent verde ROOTT */
+  --color-sky: #87ccea;
+  --color-muted: #96979f;
+
+  --color-series-r: #8edd65;
+  --color-series-m: #4aa8e0;
+  --color-series-p: #e5484d;
+  --color-series-c: #f2994a;
+  --color-series-cs: #f2c94c;
+  --color-series-b: #c9a227;
+
+  --container-site: 1200px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-[14px] leading-normal text-ink antialiased;
+  }
+  a {
+    @apply transition-colors;
+  }
+}
+
+/* Butoane — la fel ca pe roott.ru: colțuri 5px, padding mare, Open Sans 600 */
+@utility container-site {
+  @apply mx-auto w-full max-w-[1200px] px-4 md:px-6;
+}
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-[5px] border px-[60px] py-3 text-[14px] font-semibold leading-[1.3] transition-colors duration-200;
+}
+@utility btn-white {
+  @apply btn border-white bg-white text-black hover:bg-transparent hover:text-white;
+}
+@utility btn-outline-white {
+  @apply btn border-white bg-transparent text-white hover:bg-white hover:text-black;
+}
+@utility btn-outline-dark {
+  @apply btn border-black bg-transparent px-10 text-[15px] font-normal text-black hover:bg-black hover:text-white;
+}
+@utility btn-dark {
+  @apply btn border-black bg-black text-white hover:bg-transparent hover:text-black;
+}
+@utility field {
+  @apply w-full rounded-[5px] border border-white/30 bg-transparent px-4 py-3 text-[14px] text-white outline-none transition-colors placeholder:text-white/60 focus:border-white;
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

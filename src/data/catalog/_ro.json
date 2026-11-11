@@ -1,0 +1,211 @@
+{
+"dict": {
+"Размер": "Dimensiune",
+"Тип": "Tip",
+"Корневидный": "Formă radiculară",
+"корневидный": "formă radiculară",
+"Материал": "Material",
+"Категория": "Categorie",
+"Имплантаты": "Implanturi",
+"Фильтр": "Filtru",
+"Артикул": "Cod articol",
+"Абатменты": "Bonturi",
+"Аналог": "Analog",
+"Формирователь десны": "Formator gingival",
+"Инструменты": "Instrumente",
+"Трансферы": "Transferuri",
+"Прямые анатомические абатменты": "Bonturi drepte anatomice",
+"Абатмент угловой 15°": "Bont angulat 15°",
+"Абатмент угловой 25°": "Bont angulat 25°",
+"CAD-CAM платформа, ротационная, короткая": "Platformă CAD-CAM, rotațională, scurtă",
+"CAD-CAM платформа, короткая": "Platformă CAD-CAM, scurtă",
+"CAD-CAM платформа, ротационная, стандартная": "Platformă CAD-CAM, rotațională, standard",
+"Стандартные CAD-CAM платформы": "Platforme CAD-CAM standard",
+"Титановая заготовка абатмента, Pre-milled абатменты": "Semifabricat de bont din titan, bonturi Pre-milled",
+"Титановая CAD-CAM платформа для мультиюнита, стандартная": "Platformă CAD-CAM din titan pentru multi-unit, standard",
+"Мультиюнит, стандартные": "Multi-unit, standard",
+"Абатменты с аттачментом": "Bonturi cu atașament",
+"Односоставный абатмент для телескопической фиксации": "Bont monobloc pentru fixare telescopică",
+"Угловой абатмент для телескопической фиксации": "Bont angulat pentru fixare telescopică",
+"Скан-абатмент для мультиюнита,внутриротовой": "Scan-abutment pentru multi-unit, intraoral",
+"Стандартная": "Standard",
+"Мягкая": "Moale",
+"Экстра мягкая": "Extra moale",
+"Клинический винт": "Șurub clinic",
+"Формирователь десны, узкий": "Formator gingival, îngust",
+"Трансферы для закрытой ложки": "Transferuri pentru lingură închisă",
+"Формирователь десны, Стандартные": "Formator gingival, standard",
+"Трансфер для закрытой ложки": "Transfer pentru lingură închisă",
+"Трансфер для мультиюнита, для открытой ложки": "Transfer pentru multi-unit, pentru lingură deschisă",
+"Трансфер для открытой ложки": "Transfer pentru lingură deschisă",
+"Трансферный колпачок": "Capac de transfer",
+"РОМ-С": "POM-C",
+"Абатмент для мультиюнита, стандартный, прямой титановый": "Bont pentru multi-unit, standard, drept, din titan",
+"Формирующие сверла": "Freze de formare",
+"Компрессионный, с мультиюнитом": "Compresiv, cu multi-unit",
+"Формирователи десны для мультиюнитов, узкий": "Formatoare gingivale pentru multi-unit, înguste",
+"Формирователь десны, Односоставной": "Formator gingival, monobloc",
+"Формирующее cверло": "Freză de formare",
+"Формирователи десны для мультиюнитов, стандартные": "Formatoare gingivale pentru multi-unit, standard",
+"Выжигаемый абатмент для мультиюнита, прямой": "Bont calcinabil pentru multi-unit, drept",
+"Выжигаемый абатмент для мультиюнита, угловой": "Bont calcinabil pentru multi-unit, angulat",
+"Имплантовод для установки имплантатов с мультиюнитом, экстра длинный": "Inserter pentru implanturi cu multi-unit, extra lung",
+"Имплантовод для установки имплантатов с мультиюнитом, длинный": "Inserter pentru implanturi cu multi-unit, lung",
+"Имплантовод для установки имплантатов с мультиюнитом": "Inserter pentru implanturi cu multi-unit",
+"Компрессионный, птеригоидный, с мультиюнитом": "Compresiv, pterigoidian, cu multi-unit",
+"Компрессионный": "Compresiv",
+"Трансфер, ротационный, титановый": "Transfer, rotațional, din titan",
+"Трансфер, ротационный, пластиковый": "Transfer, rotațional, din plastic",
+"Трансфер, анти-ротационный, титановый": "Transfer, antirotațional, din titan",
+"Аналог имплантата, анти – ротационный, титановый": "Analog de implant, antirotațional, din titan",
+"Аналог имплантата, ротационный, пластиковый": "Analog de implant, rotațional, din plastic",
+"Выжигаемый колпачок, Прямой": "Capac calcinabil, drept",
+"Выжигаемый колпачок, угловой 15°": "Capac calcinabil, angulat 15°",
+"Выжигаемый колпачок, угловой 25°": "Capac calcinabil, angulat 25°",
+"Телескопичекий колпачок, короткий": "Capac telescopic, scurt",
+"Телескопичекий колпачок": "Capac telescopic",
+"Сверло для компрессионных имплантатов": "Freză pentru implanturi compresive",
+"Сверло для компрессионного винта": "Freză pentru șurubul compresiv",
+"Компрессионный, короткая шейка": "Compresiv, col scurt",
+"Базальный": "Bazal",
+"Базальный SS": "Bazal SS",
+"Для наращивания кости применяется, как заглушка для имплантата": "Se folosește ca șurub de acoperire a implantului la augmentarea osoasă",
+"Узкий": "Îngust",
+"Закрытая ложка": "Lingură închisă",
+"Стандартный": "Standard",
+"Открытая ложка": "Lingură deschisă",
+"Аналог имплантата": "Analog de implant",
+"Цементная фиксация": "Fixare cimentată",
+"Пластиковый колпачок": "Capac din plastic",
+"Цифровые абатменты короткие": "Bonturi digitale scurte",
+"Цифровые абатменты стандартные": "Bonturi digitale standard",
+"Цифровые абатменты": "Bonturi digitale",
+"Прямой абатмент": "Bont drept",
+"Стандартные мультиюнит-абатменты": "Bonturi multi-unit standard",
+"Абатменты с атачментом": "Bonturi cu atașament",
+"Односоставной": "Monobloc",
+"Скан-абатмент, внутриротовой": "Scan-abutment, intraoral",
+"Абатмент с телескопической фиксацией": "Bont cu fixare telescopică",
+"Матрица": "Matrice",
+"Стандартная ретенция": "Retenție standard",
+"Мягкая ретенция": "Retenție moale",
+"Экстра мягкая ретенция": "Retenție extra moale",
+"Прямой": "Drept",
+"Угловой 15°": "Angulat 15°",
+"Угловой 25°": "Angulat 25°",
+"Короткий": "Scurt",
+"Премилы": "Pre-milled",
+"Угловой 30°": "Angulat 30°",
+"Угловой 45°": "Angulat 45°",
+"Узкие": "Înguste",
+"Стандартные": "Standard",
+"Односоставные": "Monobloc",
+"Двусоставной имплантат с комбинированной резьбой": "Implant din două părți cu filet combinat",
+"Выжигаемый абатмент": "Bont calcinabil",
+"Выжигаемый абатмент с углом наклона 15 градусов": "Bont calcinabil cu unghi de înclinare de 15 grade",
+"Имплантовод для ратчета": "Inserter pentru cheia cu clichet",
+"Односоставной имплантат с мультиюнитом M": "Implant monobloc cu multi-unit M",
+"Аналог, анти-ротационный, титановый": "Analog, antirotațional, din titan",
+"Выжигаемые абатменты": "Bonturi calcinabile",
+"Титановые телескопические абатменты": "Bonturi telescopice din titan",
+"Сверла": "Freze",
+"Метчики": "Tarozi",
+"Односоставной имплантат с компрессионной резьбой": "Implant monobloc cu filet compresiv",
+"Имплантат ROOTT CS": "Implant ROOTT CS",
+"Имплантат ROOTT B": "Implant ROOTT B",
+"Имплантат ROOTT BS": "Implant ROOTT BS",
+"Имплантат ROOTT M": "Implant ROOTT M",
+"Имплантат ROOTT P": "Implant ROOTT P",
+"Имплантат ROOTT C": "Implant ROOTT C",
+"Имплантат ROOTT R": "Implant ROOTT R"
+},
+"tokens": [
+[
+"ITМ",
+"ITM"
+],
+[
+"экстра длинный",
+"extra lung"
+],
+[
+"длинный",
+"lung"
+],
+[
+"короткий",
+"scurt"
+],
+[
+"Стандартные",
+"Standard"
+],
+[
+"угловой",
+"angulat"
+],
+[
+"десны",
+"gingie"
+],
+[
+"мм",
+"mm"
+],
+[
+"см",
+"cm"
+]
+],
+"heroText": {
+"roott-r": "Implanturile din două părți ROOTT R (Elveția), cu filet combinat și conexiune conică sigură. Destinate restaurărilor unitare și multiple cu încărcare imediată și amânată, la maxilar și mandibulă, în toate tipurile de os.",
+"roott-m": "Implantul monobloc cu filet autofiletant compactează osul la inserare, asigurând o stabilitate primară ridicată.",
+"roott-p": "Implantul ROOTT P cu bont multi-unit are un filet combinat unic. Este destinat inserării la maxilar, în procesul pterigoidian.",
+"roott-c": "Filetul compresiv special permite obținerea unei stabilități primare ideale a implantului în cazul atrofiei orizontale a procesului alveolar. La inserarea implanturilor compresive ROOTT C are loc compactarea țesutului osos, ceea ce îmbunătățește integrarea.",
+"roott-cs": "Implanturile compresive se inserează în cazul atrofiei osoase medii, atât cu lambou, cât și fără lambou. Este posibilă inserarea imediat după extracția dintelui, cu încărcare imediată. Datorită colului scurt, ROOTT CS poate fi inserat la o înălțime a gingiei sub 1 mm.",
+"roott-b": "Implantul monobloc ROOTT B este destinat inserării în condiții de deficit osos. Implant cu col al bontului îndoibil și filet ascuțit pentru inserarea în partea corticală și medulară a osului. Permite ocolirea nervului mandibular și poate fi inserat în osul cortical al procesului pterigoidian al maxilarului. Poate fi utilizat în combinație cu implanturile compresive.",
+"roott-bs": "Implantul monobloc ROOTT BS, cu suprafață sablată și anodizată, este conceput special pentru a îmbunătăți osteointegrarea, în special în cazurile de deficit osos sever, când protocolul clasic nu este potrivit."
+},
+"packaging": [
+[
+"Каждый имплантат поставляется в стерильной упаковке с многофункциональным носителем, двухкомпонентным (разборным) держателем, винтом - заглушкой и этикетками для клинических записей.",
+"Fiecare implant este livrat în ambalaj steril, cu purtător multifuncțional, suport din două componente (demontabil), șurub de acoperire și etichete pentru fișele clinice."
+],
+[
+"Каждый имплантат поставляется в стерильной упаковке с многофункциональным носителем, двухкомпонентным (разборным) держателем и этикетками для клинических записей.",
+"Fiecare implant este livrat în ambalaj steril, cu purtător multifuncțional, suport din două componente (demontabil) și etichete pentru fișele clinice."
+],
+[
+"Каждый имплантат поставляется в стерильной упаковке с двухкомпонентным (разборным) держателем и этикетками для клинических записей.",
+"Fiecare implant este livrat în ambalaj steril, cu suport din două componente (demontabil) și etichete pentru fișele clinice."
+],
+[
+"Содержание каждой коробки:",
+"Conținutul fiecărei cutii:"
+],
+[
+"Внешняя картонная коробка с гамма-индикатором",
+"Cutie exterioară din carton cu indicator gamma"
+],
+[
+"Стерильный блистер с имплантатом",
+"Blister steril cu implant"
+],
+[
+"Многофункциональный носитель с крепежным винтом",
+"Purtător multifuncțional cu șurub de fixare"
+],
+[
+"Двухкомпонентный (разборный) держатель",
+"Suport din două componente (demontabil)"
+],
+[
+"Винт - заглушка",
+"Șurub de acoperire"
+],
+[
+"Этикетки для клинических записей",
+"Etichete pentru fișele clinice"
+]
+]
+}

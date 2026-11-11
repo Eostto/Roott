@@ -1,0 +1,13 @@
+/* /bitrix/cache/css/s1/trate/page_5041e0b3760d5be8f2c670f9ed774273/page_5041e0b3760d5be8f2c670f9ed774273_v1.css?1793982493483 */
+
+
+/* Start:/local/components/gala/main.feedback/templates/.default/style.css?1716370442293*/
+div.mfeedback {}
+div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {width:80%; padding-bottom:0.4em;}
+div.mf-name input, div.mf-email input {width:60%;}
+div.mf-message textarea {width: 60%;}
+span.mf-req {color:red;}
+div.mf-ok-text {color:green; font-weight:bold; padding-bottom: 1em;}
+
+/* End */
+/* /local/components/gala/main.feedback/templates/.default/style.css?1716370442293 */

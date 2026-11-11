@@ -1,0 +1,28 @@
+0|Moscova
+1|Garanția și politica de returnare pe site-ul roott.md
+2|Prezenta politică de garanție și returnare se aplică tuturor produselor fabricate de compania ROOTT AG.
+3|Garanția și politica de returnare
+4|Prezenta politică se aplică doar înlocuirii produselor și nu se aplică/nu acoperă cheltuielile și costurile aferente.
+16|Asigurați-vă că toate produsele care fac obiectul prezentei politici de garanție au fost inserate conform procedurilor prescrise de roott.md, inclusiv Instrucțiunile de utilizare, și conform practicii medicale/stomatologice general acceptate.
+17|Important! Formularul de garanție și returnare este disponibil pe pagina web
+18|ca anexă la Politica de garanție și returnare; formularul poate fi obținut și adresându-vă reprezentantului Serviciului de asistență clienți. Toate reclamațiile în garanție trebuie să conțină numărul LOT al produselor. Neprezentarea acestor informații sau a oricăror altor informații necesare, precum și nereturnarea produselor originale pot duce la anularea politicii de garanție
+19|Prezenta politică de garanție este singura garanție oferită de compania roott.md. Prin prezenta, roott.md declină orice alte garanții, exprese sau implicite. Prin prezenta, roott.md exclude orice răspundere pentru beneficiul nerealizat și pentru prejudiciile directe sau indirecte, precum și pentru pierderile incidentale și indirecte, legate direct sau indirect de produse, servicii și informații.
+20|Teritoriul de aplicare a garanției
+21|Prezenta garanție se aplică pe întreg teritoriul Republicii Moldova și doar produselor fabricate de compania ROOTT AG.
+22|Modificarea sau încetarea aplicării
+23|roott.md poate oricând să modifice integral sau parțial ori să înceteze aplicarea prezentei politici de garanție.
+24|Modificarea sau încetarea aplicării politicii de garanție nu afectează garanția acordată pentru produsele implantate înainte de data modificării sau a încetării garanției
+25|Procedura de raportare
+26|Distribuitorii, clinicile stomatologice și cabinetele stomatologice private care au primit informații despre incidente presupuse legate de produsele roott.md trebuie să transmită imediat aceste informații producătorului, depunând o solicitare în secțiunea „Contactați-ne” de pe pagina web
+27|sau să sune la serviciul de asistență clienți la telefonul +373 (79) 660-008
+5|Prin prezenta, roott.md garantează că, dacă în perioada de garanție vreun produs se dovedește defect ca urmare a încălcării rezistenței și stabilității materialului, roott.md va înlocui produsul cu unul identic sau echivalent.
+6|Se returnează doar produsele care nu au fost utilizate.
+7|Produsele utilizate nu se returnează Producătorului și trebuie supuse procedurii de curățare, dezinfectare, decontaminare, ambalare, marcare și eliminare prevăzute pentru astfel de dispozitive, conform cerințelor legale, de către Distribuitor, clinica stomatologică sau cabinetul stomatologic privat. Informațiile despre defectele acestor produse trebuie transmise Producătorului prin Formularul de reclamație.
+8|Condiția înlocuirii este respectarea cerințelor de garanție, confirmată documentar.
+9|Termenul de garanție este pe viață, dacă se dovedește că componentele sistemului ROOTT au fost utilizate conform cerințelor instrucțiunii de utilizare și cu respectarea indicațiilor, condițiilor de utilizare și contraindicațiilor descrise de producător în instrucțiunea de utilizare.
+10|Produsele au fost utilizate conform destinației, nu în combinație cu produse ale altor producători.
+11|Nu constituie caz de garanție situația în care produsul a fost implantat unui pacient cu contraindicații absolute, precum și situația produsă în urma unui accident, a unui traumatism sau a oricărei alte deteriorări din vina pacientului ori a unui terț.
+12|Termenul de notificare a cazului de garanție nu trebuie să depășească trei luni de la producerea acestuia.
+13|Pentru a beneficia de garanție, medicul sau dealerul trebuie:
+14|Să notifice compania roott.md despre producerea cazului de garanție.
+15|Notificarea se face prin depunerea formularului de Garanție și Politică de returnare completat corect.
