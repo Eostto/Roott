@@ -7,7 +7,7 @@ GLOBAL = [
     ('+7 (499) 322-44-31', '+373 (79) 660-008'),
     ('ООО «ТРЕЙТ»', 'roott.md'), ('ООО “ТРЕЙТ”', 'roott.md'), ('ООО "ТРЕЙТ"', 'roott.md'), ('ООО &quot;ТРЕЙТ&quot;', 'roott.md'),
     ('ТРЕЙТ', 'roott.md'), ('TRATE AG', 'ROOTT AG'), ('TRATE', 'ROOTT'),
-    ('info@roott.ru', 'info@roott.md'), ('ИНН 7715412407', ''),
+    ('info@roott.ru', 'dentonemd@gmail.com'), ('info@roott.md', 'dentonemd@gmail.com'), ('ИНН 7715412407', ''),
     ('{{L}}/where-can-buy"', '{{L}}/catalog/roott-r"'), ('{{L}}/catalog/roott-s"', '{{L}}/catalog"'), ('Заказать импланты ROOT<', 'Заказать импланты ROOTT<'),
     ('https://t.me/+Hd-bBWGfROtkNjAy', 'https://t.me/+37379660008'), ('https://chat.whatsapp.com/IVfOT0HoxatKLiVUVuGzbp', 'https://wa.me/37379660008'),
     ('https://t.me/roott_ru', 'https://t.me/+37379660008'),
