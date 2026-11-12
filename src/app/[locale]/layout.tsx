@@ -10,6 +10,7 @@ import CookieBanner from "@/components/CookieBanner";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { organizationJsonLd, jsonLdScript, seoMeta } from "@/lib/seo";
 import { CartProvider } from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 
@@ -36,7 +37,12 @@ export async function generateMetadata({
     title: t.meta.title,
     description: t.meta.description,
     metadataBase: new URL("https://roott.md"),
-    alternates: { languages: { ro: "/ro", ru: "/ru" } },
+    ...seoMeta(locale, "/", { title: t.meta.title, description: t.meta.description }),
+    keywords:
+      locale === "ro"
+        ? ["ROOTT", "implanturi dentare", "implanturi ROOTT Moldova", "implanturi Chișinău", "multi-unit", "bonturi", "implanturi elvețiene"]
+        : ["ROOTT", "дентальные имплантаты", "импланты ROOTT Молдова", "имплантаты Кишинёв", "мультиюнит", "абатменты", "швейцарские импланты"],
+    formatDetection: { telephone: true },
     icons: {
       icon: [{ url: "/icons/logo.svg", type: "image/svg+xml" }, { url: "/favicon.ico", sizes: "48x48" }],
       apple: "/icons/apple-touch-icon.png",
@@ -58,6 +64,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={openSans.variable}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(organizationJsonLd(locale))} />
         <UIProvider>
           <CartProvider>
             <TopBar t={t.topBar} />

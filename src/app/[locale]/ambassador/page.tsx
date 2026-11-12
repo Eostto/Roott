@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
+import { seoMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
@@ -105,7 +106,7 @@ type Params = Promise<{ locale: string }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  return { title: `${C[locale].meta} | roott.md`, description: C[locale].lead };
+  return { title: `${C[locale].meta} | roott.md`, description: C[locale].lead, ...seoMeta(locale, "/ambassador", { title: C[locale].meta, description: C[locale].lead, image: "/images/roott/hero-ambassador.jpg" }) };
 }
 
 export default async function AmbassadorPage({ params }: { params: Params }) {

@@ -6,6 +6,7 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { SHOW_PRICES } from "@/lib/company";
 import { allProducts, detailsHtml, formatPrice, getLine, getProduct, packagingHtml, pick } from "@/lib/catalog";
+import { jsonLdScript, seoMeta, SITE_URL } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AddToCart from "@/components/shop/AddToCart";
 import ProductAccordions from "@/components/shop/ProductAccordions";
@@ -21,7 +22,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const p = getProduct(id);
   if (!p || !isLocale(locale)) return {};
   const caption = pick(p.caption, locale);
-  return { title: `${p.name}${caption ? " " + caption : ""} — ROOTT ${getLine(p.line)?.title.replace("ROOTT ", "") ?? ""} | roott.md` };
+  const title = `${p.name}${caption ? " " + caption : ""} — ROOTT ${getLine(p.line)?.title.replace("ROOTT ", "") ?? ""}`;
+  const props = p.props.map((pr) => `${pick(pr.l, locale)}: ${pick(pr.v, locale)}`).join(", ");
+  const description = `${p.name} — ${caption}. ${props}. ${locale === "ro" ? "ROOTT Moldova, Dent One Group, Chișinău." : "ROOTT Молдова, Dent One Group, Кишинёв."}`;
+  return { title: `${title} | roott.md`, description, ...seoMeta(locale, `/catalog/${p.line}/${p.id}`, { title, description, image: p.image }) };
 }
 
 export default async function ProductPage({ params }: { params: Params }) {
@@ -44,8 +48,35 @@ export default async function ProductPage({ params }: { params: Params }) {
   const caption = pick(p.caption, locale);
   const href = `/${locale}/catalog/${p.line}/${p.id}`;
 
+  const ld = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: `${p.name}${caption ? " — " + caption : ""}`,
+      sku: p.name,
+      mpn: p.name,
+      brand: { "@type": "Brand", name: "ROOTT" },
+      category: line.title,
+      image: p.image ? `${SITE_URL}${p.image}` : undefined,
+      description: p.props.map((pr) => `${pick(pr.l, locale)}: ${pick(pr.v, locale)}`).join("; "),
+      url: `${SITE_URL}${href}`,
+      seller: { "@id": `${SITE_URL}/#organization` },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: t.common.home, item: `${SITE_URL}/${locale}` },
+        { "@type": "ListItem", position: 2, name: t.common.shop, item: `${SITE_URL}/${locale}/catalog` },
+        { "@type": "ListItem", position: 3, name: line.title, item: `${SITE_URL}/${locale}/catalog/${line.slug}` },
+        { "@type": "ListItem", position: 4, name: p.name, item: `${SITE_URL}${href}` },
+      ],
+    },
+  ];
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(ld)} />
       <Breadcrumbs
         items={[
           { label: t.common.home, href: `/${locale}` },

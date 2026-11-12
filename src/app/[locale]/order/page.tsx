@@ -8,7 +8,7 @@ import OrderForm from "@/components/cart/OrderForm";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  return { title: `${getDictionary(locale).order.title} | roott.md`, robots: { index: false } };
+  return { title: `${getDictionary(locale).order.title} | roott.md`, robots: { index: false, follow: true } };
 }
 
 export default async function OrderPage({ params }: { params: Promise<{ locale: string }> }) {

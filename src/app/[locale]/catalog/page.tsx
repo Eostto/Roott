@@ -5,12 +5,18 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { lines, pick } from "@/lib/catalog";
+import { seoMeta } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  return { title: `${getDictionary(locale).shop.title} — roott.md` };
+  const t = getDictionary(locale);
+  const description =
+    locale === "ro"
+      ? "Magazin online ROOTT Moldova: implanturi dentare R, M, P, C, CS, B, BS, bonturi, multi-unit M, N și NS, transferuri și instrumente chirurgicale."
+      : "Интернет-магазин ROOTT Молдова: дентальные имплантаты R, M, P, C, CS, B, BS, абатменты, мультиюниты M, N и NS, трансферы и хирургические инструменты.";
+  return { title: `${t.shop.title} — roott.md`, description, ...seoMeta(locale, "/catalog", { title: t.shop.title, description }) };
 }
 
 /** /catalog — lista liniilor de produse (pe roott.ru pagina nu există, aici e un index util). */

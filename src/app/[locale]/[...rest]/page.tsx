@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { isTranslated, loadPage, pageHtml, pageIndex, pageTitle } from "@/lib/legacy";
+import { seoMeta } from "@/lib/seo";
 import LegacyHtml from "@/components/legacy/LegacyHtml";
 
 /** Secțiuni care pe roott.ru redirecționează spre prima subpagină. */
@@ -31,7 +32,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!isLocale(locale)) return {};
   const page = await loadPage("/" + rest.join("/"));
   if (!page) return {};
-  return { title: `${pageTitle(page, locale)} | roott.md`, description: locale === "ro" ? page.descRo || undefined : page.desc || undefined };
+  const path = "/" + rest.map(decodeURIComponent).join("/");
+  const title = pageTitle(page, locale);
+  const description = (locale === "ro" ? page.descRo : page.desc) || undefined;
+  return { title: `${title} | roott.md`, description, ...seoMeta(locale, path, { title, description }) };
 }
 
 /** Toate paginile de conținut copiate de pe roott.ru (despre noi, dealeri, știri, evenimente…). */
