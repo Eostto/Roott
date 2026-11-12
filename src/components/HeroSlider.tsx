@@ -19,9 +19,9 @@ export default function HeroSlider({ t, locale }: { t: Dictionary["hero"]; local
       {/* 1. Dealer */}
       <section className="relative h-[calc(100svh-305px)] min-h-[520px] overflow-hidden bg-[#3b4140] text-white">
         <img
-          src="/images/roott/hero-ambassador.jpg"
+          src="/images/roott/hero-system.jpg"
           alt={t.dealer.title}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
         <div className="relative flex h-full items-end justify-center px-4 pb-10 text-center md:pb-14">
@@ -56,7 +56,7 @@ export default function HeroSlider({ t, locale }: { t: Dictionary["hero"]; local
       {/* 2. Sistem elvețian */}
       <section className="relative h-[100svh] max-h-[900px] min-h-[560px] overflow-hidden bg-[#2a2c30] text-white">
         <img
-          src="/images/roott/hero-system.jpg"
+          src="/images/roott/hero-ambassador.jpg"
           alt={t.system.title}
           className="absolute inset-0 h-full w-full object-cover"
         />
