@@ -104,6 +104,11 @@ extra = '''
 .legacy .swiper-wrapper::-webkit-scrollbar{display:none}
 .legacy .swiper-slide{flex-shrink:0;scroll-snap-align:start}
 .legacy [data-hystmodal]{cursor:pointer}
+/* formularul „Scrieți-ne”: preflight-ul Tailwind face câmpurile transparente pe fundalul închis */
+.legacy .feedback__green__form input[type="text"],.legacy .feedback__green__form input[type="email"],.legacy .feedback__green__form input[type="tel"],.legacy .feedback__green__form textarea{background-color:#fff;color:#42454A;font-size:14px;line-height:20px;border-radius:5px}
+.legacy .feedback__green__form input::placeholder,.legacy .feedback__green__form textarea::placeholder{color:#42454A;opacity:.7}
+.legacy .feedback__green__form input:focus,.legacy .feedback__green__form textarea:focus,.legacy .feedback__green__form select:focus{box-shadow:0 0 0 2px #8edd65}
+.legacy .feedback__green__form input[type="checkbox"]{accent-color:#fff}
 '''
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 open(OUT, 'w', encoding='utf-8').write('\n'.join(all_css) + extra)
