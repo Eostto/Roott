@@ -37,7 +37,10 @@ export async function generateMetadata({
     description: t.meta.description,
     metadataBase: new URL("https://roott.md"),
     alternates: { languages: { ro: "/ro", ru: "/ru" } },
-    icons: { icon: "/icons/logo.svg" },
+    icons: {
+      icon: [{ url: "/icons/logo.svg", type: "image/svg+xml" }, { url: "/favicon.ico", sizes: "48x48" }],
+      apple: "/icons/apple-touch-icon.png",
+    },
   };
 }
 
