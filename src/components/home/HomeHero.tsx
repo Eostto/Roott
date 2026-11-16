@@ -56,11 +56,11 @@ function Intro({ t, locale, dark }: { t: Dictionary["home"]; locale: Locale; dar
       <span
         className={
           dark
-            ? "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-lime backdrop-blur"
+            ? "inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-[16px] font-bold md:text-[18px] uppercase tracking-[0.14em] text-lime backdrop-blur"
             : "inline-flex items-center gap-2 rounded-full border border-black/5 bg-white/80 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#3d7f20] shadow-sm backdrop-blur"
         }
       >
-        <svg viewBox="0 0 32 32" className="h-4 w-4 shrink-0 rounded-[3px]" aria-label="Elveția" role="img">
+        <svg viewBox="0 0 32 32" className="h-6 w-6 shrink-0 rounded-[4px]" aria-label="Elveția" role="img">
           <rect width="32" height="32" fill="#da291c" />
           <path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff" />
         </svg>
