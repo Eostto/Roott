@@ -114,7 +114,7 @@ const ro = {
   },
 
   home: {
-    eyebrow: "Sistem elvețian de implanturi dentare",
+    eyebrow: "Swiss Implant",
     title: "Implanturi ROOTT pentru toate cazurile clinice",
     lead: "Distribuitorul oficial ROOTT în Republica Moldova. Implanturi, componente protetice, multi-unit și instrumente chirurgicale — cu garanție pe viață de la producător.",
     shop: "Vezi magazinul",

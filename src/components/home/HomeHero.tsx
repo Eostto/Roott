@@ -60,7 +60,10 @@ function Intro({ t, locale, dark }: { t: Dictionary["home"]; locale: Locale; dar
             : "inline-flex items-center gap-2 rounded-full border border-black/5 bg-white/80 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#3d7f20] shadow-sm backdrop-blur"
         }
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-lime" />
+        <svg viewBox="0 0 32 32" className="h-4 w-4 shrink-0 rounded-[3px]" aria-label="Elveția" role="img">
+          <rect width="32" height="32" fill="#da291c" />
+          <path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff" />
+        </svg>
         {t.eyebrow}
       </span>
       <h1 className={`mt-6 text-[36px] font-bold leading-[1.06] tracking-[-0.025em] md:text-[56px] ${dark ? "text-white" : "text-[#0e1525]"}`}>{t.title}</h1>
