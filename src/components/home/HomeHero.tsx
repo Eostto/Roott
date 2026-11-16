@@ -20,6 +20,7 @@ const BADGE_ICONS = [
 export type HeroVariant = 1 | 2 | 3;
 
 const IMG = "/images/roott/hero-roott-r.webp";
+const FADE = "radial-gradient(ellipse 50% 50% at 50% 47%, #000 55%, transparent 100%)";
 
 function Buttons({ t, locale, dark }: { t: Dictionary["home"]; locale: Locale; dark?: boolean }) {
   const { openCall } = useUI();
@@ -147,7 +148,8 @@ export default function HomeHero({ t, locale, variant = 1 }: { t: Dictionary["ho
               src={IMG}
               alt="ROOTT R"
               fetchPriority="high"
-              className="relative w-full [mask-image:radial-gradient(ellipse_48%_52%_at_50%_46%,#000_62%,transparent_100%)]"
+              className="relative w-full"
+              style={{ maskImage: FADE, WebkitMaskImage: FADE }}
             />
           </div>
         </div>
