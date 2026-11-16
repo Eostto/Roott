@@ -44,10 +44,11 @@ export function AmbassadorBand({ t, eyebrow, locale }: { t: Dictionary["hero"]["
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-[1224px] px-4">
-        <div className="grid overflow-hidden rounded-[36px] bg-[#0e1525] text-white lg:grid-cols-2">
-          <div className="relative min-h-[300px] lg:order-2">
-            <img src="/images/roott/hero-system.jpg" alt={t.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0e1525]/60 to-transparent lg:bg-gradient-to-r lg:from-[#0e1525] lg:via-[#0e1525]/10" />
+        <div className="grid overflow-hidden rounded-[36px] bg-[#0e1525] text-white lg:grid-cols-[1fr_1.15fr]">
+          <div className="relative aspect-[16/10] lg:order-2 lg:aspect-auto lg:min-h-[520px]">
+            <img src="/images/roott/hero-system-wide.webp" alt={t.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0e1525]/50 to-transparent lg:hidden" />
+            <div className="absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-[#0e1525] to-transparent lg:block" />
           </div>
           <div className="relative p-8 md:p-12 lg:p-16">
             <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-lime">{eyebrow}</p>
