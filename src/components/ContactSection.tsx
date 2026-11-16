@@ -9,25 +9,26 @@ import { Chevron } from "./icons";
 import { sendLead } from "@/lib/sendLead";
 
 const input =
-  "w-full rounded-[5px] bg-white px-5 py-[15px] text-[14px] leading-5 text-[#42454a] outline-none placeholder:text-[#42454a]/70 focus:ring-2 focus:ring-lime";
+  "w-full rounded-2xl border border-black/10 bg-white px-5 py-[15px] text-[14px] leading-5 text-[#0e1525] outline-none transition placeholder:text-[#6b7180] focus:border-lime focus:ring-4 focus:ring-lime/20";
 
 /** „Aveți întrebări? Scrieți-ne” — poză în stânga, formular pe fundal închis în dreapta. */
 export default function ContactSection({ t, locale }: { t: Dictionary["contact"]; locale: Locale }) {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="grid bg-slate lg:grid-cols-2">
-      <div className="relative hidden min-h-[667px] bg-white lg:block">
+    <section id="contact" className="bg-white py-16 md:py-24">
+      <div className="mx-auto grid max-w-[1224px] overflow-hidden rounded-[36px] bg-[#f6f7f5] lg:grid-cols-2">
+      <div className="relative hidden min-h-[620px] lg:block">
         <img src="/images/roott/contact.png" alt="ROOTT" className="absolute inset-0 h-full w-full object-cover" />
       </div>
 
-      <div className="flex justify-center px-4 pb-[80px] pt-[80px] text-white lg:pb-[114px] lg:pt-[129px]">
+      <div className="flex justify-center px-6 py-12 text-[#0e1525] md:px-12 lg:py-16">
         <div className="w-full max-w-[556px]">
-          <p className="text-center text-[14px]">{t.title}</p>
-          <p className="mt-1 text-center text-[24px] font-semibold md:text-[28px]">{t.subtitle}</p>
+          <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#3d7f20]">{t.title}</p>
+          <p className="mt-3 text-[30px] font-bold leading-tight tracking-[-0.015em] md:text-[40px]">{t.subtitle}</p>
 
           {sent ? (
-            <p className="mt-10 rounded-[5px] bg-white/10 p-6 text-center text-[16px]">{t.success}</p>
+            <p className="mt-10 rounded-2xl bg-white p-6 text-center text-[16px] ring-1 ring-black/5">{t.success}</p>
           ) : (
             <form
               className="mt-8 space-y-[10px]"
@@ -46,7 +47,7 @@ export default function ContactSection({ t, locale }: { t: Dictionary["contact"]
                   required
                   name="topic"
                   defaultValue=""
-                  className="h-12 w-full appearance-none rounded-[5px] bg-white px-[15px] pr-10 text-[14px] text-black outline-none focus:ring-2 focus:ring-lime"
+                  className="h-[52px] w-full appearance-none rounded-2xl border border-black/10 bg-white px-5 pr-10 text-[14px] text-[#0e1525] outline-none transition focus:border-lime focus:ring-4 focus:ring-lime/20"
                 >
                   <option value="" disabled>
                     {t.topicPlaceholder}
@@ -64,8 +65,8 @@ export default function ContactSection({ t, locale }: { t: Dictionary["contact"]
                 <input required name="email" type="email" placeholder={t.email} className={input} />
               </div>
               <textarea required name="message" rows={5} placeholder={t.message} className={`${input} resize-none`} />
-              <label className="flex items-start gap-3 pt-2 text-[12px] leading-4 text-white/80">
-                <input required type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-white" />
+              <label className="flex items-start gap-3 pt-2 text-[12px] leading-4 text-[#5a6070]">
+                <input required type="checkbox" className="mt-0.5 h-4 w-4 shrink-0 accent-[#3d7f20]" />
                 <span>
                   {t.consent}{" "}
                   <Link href={`/${locale}/privacy-policy`} className="underline">
@@ -73,10 +74,10 @@ export default function ContactSection({ t, locale }: { t: Dictionary["contact"]
                   </Link>
                 </span>
               </label>
-              <div className="flex justify-center pt-4">
+              <div className="pt-4">
                 <button
                   type="submit"
-                  className="rounded-[5px] border border-black bg-black px-[50px] py-3 text-[14px] leading-[18px] text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+                  className="rounded-full bg-[#0e1525] px-10 py-4 text-[15px] font-semibold text-white transition hover:bg-[#1c2740]"
                 >
                   {t.send}
                 </button>
@@ -84,6 +85,7 @@ export default function ContactSection({ t, locale }: { t: Dictionary["contact"]
             </form>
           )}
         </div>
+      </div>
       </div>
     </section>
   );

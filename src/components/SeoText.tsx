@@ -6,27 +6,27 @@ import { Check } from "./icons";
 /** Blocul de text de la finalul paginii (fundal #F4F4F4). */
 export default function SeoText({ t, locale }: { t: Dictionary["seo"]; locale: Locale }) {
   const L = (h: string) => `/${locale}${h}`;
-  const h2 = "mt-12 text-[22px] font-semibold leading-[1.5] md:text-[28px]";
-  const p = "mt-4 text-[15px] leading-[1.9] md:text-[16px] md:leading-[33.6px]";
+  const h2 = "mt-12 text-[22px] font-bold leading-[1.4] text-[#0e1525] md:text-[26px]";
+  const p = "mt-4 text-[15px] leading-8 text-[#4a5160] md:text-[16px]";
 
   return (
-    <section className="bg-paper py-14 md:py-20">
+    <section className="bg-[#f6f7f5] py-16 md:py-24">
       <div className="mx-auto max-w-[1232px] px-4">
         <div className="max-w-[945px]">
-          <h1 className="text-[24px] font-semibold leading-[1.5] md:text-[28px]">{t.h1}</h1>
+          <h2 className="text-[26px] font-bold leading-[1.3] tracking-[-0.015em] text-[#0e1525] md:text-[32px]">{t.h1}</h2>
           <p className={p}>{t.intro}</p>
           <h2 className={h2}>{t.typesTitle}</h2>
         </div>
 
-        <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {t.types.map((ty) => (
-            <li key={ty.name} className="border-b border-r border-black/10 px-4 py-[35px] text-[14px] leading-[29.4px] [&:nth-child(4n)]:border-r-0">
+            <li key={ty.name} className="rounded-2xl bg-white p-6 text-[14px] leading-6 text-[#4a5160] ring-1 ring-black/5">
               {ty.name === "ROOTT S" ? (
-                <span className="text-[18px] font-semibold leading-[37.8px]">{ty.name}</span>
+                <span className="text-[18px] font-bold leading-9 text-[#0e1525]">{ty.name}</span>
               ) : (
                 <Link
                   href={L(`/catalog/${ty.name.toLowerCase().replace(" ", "-")}`)}
-                  className="text-[18px] font-semibold leading-[37.8px] underline-offset-4 hover:underline"
+                  className="text-[18px] font-bold leading-9 text-[#0e1525] underline-offset-4 hover:underline"
                 >
                   {ty.name}
                 </Link>

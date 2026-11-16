@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import ProductStrip from "@/components/ProductStrip";
-import HeroSlider from "@/components/HeroSlider";
-import SystemBanner from "@/components/SystemBanner";
-import FeatureStack from "@/components/FeatureStack";
+import HomeHero from "@/components/home/HomeHero";
+import ProductLines from "@/components/home/ProductLines";
+import NewLine from "@/components/home/NewLine";
+import { AboutSystem, AmbassadorBand, Resources } from "@/components/home/HomeSections";
 import NewsArticles from "@/components/NewsArticles";
 import ContactSection from "@/components/ContactSection";
 import SeoText from "@/components/SeoText";
@@ -21,10 +21,12 @@ export default async function HomePage({
   return (
     <>
       <main>
-        <ProductStrip items={t.products} locale={locale} />
-        <HeroSlider t={t.hero} locale={locale} />
-        <SystemBanner t={t.system} locale={locale} />
-        <FeatureStack t={t.features} locale={locale} />
+        <HomeHero t={t.home} locale={locale} />
+        <ProductLines t={t.home} locale={locale} />
+        <NewLine t={t.home} locale={locale} />
+        <AboutSystem t={t.system} locale={locale} />
+        <AmbassadorBand t={t.hero.dealer} eyebrow={t.home.ambEyebrow} locale={locale} />
+        <Resources title={t.home.featuresTitle} features={t.features} events={t.nav.find((n) => "href" in n && n.href === "/sobytiya")?.label ?? "Evenimente"} locale={locale} />
         <NewsArticles news={t.news} articles={t.articles} locale={locale} />
         <ContactSection t={t.contact} locale={locale} />
         <SeoText t={t.seo} locale={locale} />
