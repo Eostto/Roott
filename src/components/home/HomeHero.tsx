@@ -54,7 +54,7 @@ export default function HomeHero({ t, locale }: { t: Dictionary["home"]; locale:
         <div className="relative mx-auto aspect-square w-full max-w-[540px]">
           <div className="absolute inset-[6%] rounded-full bg-white shadow-[0_40px_120px_-40px_rgba(14,21,37,0.35)] ring-1 ring-black/5" />
           <div className="absolute inset-[16%] rounded-full bg-gradient-to-br from-[#f1f8ec] to-white" />
-          <img src="/images/roott/system.webp" alt="ROOTT" className="relative h-full w-full object-contain p-[9%]" fetchPriority="high" />
+          <img src="/images/roott/system.webp" alt="ROOTT" className="relative h-full w-full object-contain p-[17%]" fetchPriority="high" />
         </div>
       </div>
 

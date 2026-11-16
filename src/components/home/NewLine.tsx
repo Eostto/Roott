@@ -7,8 +7,8 @@ import { Arrow, Check } from "../icons";
 const TILES = [
   { src: "/images/roott/n-series/N2A45.webp", alt: "N2A45" },
   { src: "/images/roott/n-series/NGFM2.webp", alt: "NGFM2" },
-  { src: "/images/roott/n-series/N1A60.webp", alt: "N1A60" },
-  { src: "/images/roott/n-series/NTOM.webp", alt: "NTOM" },
+  { src: "/images/roott/n-series/N2A60.webp", alt: "N2A60" },
+  { src: "/images/roott/n-series/NSPCOMIO.webp", alt: "NSPCOMIO" },
 ];
 
 /** Noutatea lunii: multi-unit N / NS. */

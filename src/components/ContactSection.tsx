@@ -16,8 +16,8 @@ export default function ContactSection({ t, locale }: { t: Dictionary["contact"]
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="bg-white py-16 md:py-24">
-      <div className="mx-auto grid max-w-[1224px] overflow-hidden rounded-[36px] bg-[#f6f7f5] lg:grid-cols-2">
+    <section id="contact" className="bg-white px-4 py-16 md:py-24">
+      <div className="mx-auto grid max-w-[1192px] overflow-hidden rounded-[36px] bg-[#f6f7f5] lg:grid-cols-2">
       <div className="relative hidden min-h-[620px] lg:block">
         <img src="/images/roott/contact.png" alt="ROOTT" className="absolute inset-0 h-full w-full object-cover" />
       </div>

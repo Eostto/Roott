@@ -36,7 +36,7 @@ export default function NewsArticles({
 
   return (
     <section className="bg-white py-16 md:py-24">
-      <div className="mx-auto grid max-w-[1224px] px-4 lg:grid-cols-[1fr_300px] lg:px-0">
+      <div className="mx-auto grid max-w-[1224px] px-4 lg:grid-cols-[1fr_300px]">
         <div className="lg:pr-10">
           {/* Noutăți */}
           <h2 className={h2}>{news.title}</h2>
