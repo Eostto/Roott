@@ -9,23 +9,15 @@ import NewsArticles from "@/components/NewsArticles";
 import ContactSection from "@/components/ContactSection";
 import SeoText from "@/components/SeoText";
 
-export default async function HomePage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ locale: string }>;
-  searchParams: Promise<{ v?: string }>;
-}) {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const v = Number((await searchParams).v);
-  const variant = (v === 2 || v === 3 ? v : 1) as 1 | 2 | 3;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
 
   return (
     <>
       <main>
-        <HomeHero t={t.home} locale={locale} variant={variant} />
+        <HomeHero t={t.home} locale={locale} />
         <ProductLines t={t.home} locale={locale} />
         <NewLine t={t.home} locale={locale} />
         <AboutSystem t={t.system} locale={locale} />

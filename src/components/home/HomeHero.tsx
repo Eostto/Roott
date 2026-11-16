@@ -17,8 +17,6 @@ const BADGE_ICONS = [
   <path key="d" d="M3 6h11v10H3V6Zm11 4h4l3 3v3h-7v-6ZM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />,
 ];
 
-export type HeroVariant = 1 | 2 | 3;
-
 const IMG = "/images/roott/hero-roott-r.webp";
 const FADE = "radial-gradient(ellipse 50% 50% at 50% 47%, #000 55%, transparent 100%)";
 
@@ -99,83 +97,27 @@ function Badges({ t, dark }: { t: Dictionary["home"]; dark?: boolean }) {
   );
 }
 
-/** Eticheta „ROOTT R” de pe poză. */
-function SeriesTag() {
+/** Primul ecran — fundal negru premium, implantul ROOTT R. */
+export default function HomeHero({ t, locale }: { t: Dictionary["home"]; locale: Locale }) {
   return (
-    <div className="absolute left-6 top-6 flex items-center gap-3 rounded-full border border-white/10 bg-black/40 py-1.5 pl-1.5 pr-4 backdrop-blur-md">
-      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-lime text-[13px] font-bold text-[#0b0d10]">R</span>
-      <span className="text-[13px] font-semibold tracking-wide text-white">ROOTT R · Swiss made</span>
-    </div>
-  );
-}
-
-/** Primul ecran — 3 variante (aleasă prin ?v=1|2|3 în previzualizare). */
-export default function HomeHero({ t, locale, variant = 1 }: { t: Dictionary["home"]; locale: Locale; variant?: HeroVariant }) {
-  /* Varianta 2: ecran împărțit — text pe alb, implantul pe un panou negru până la marginea ecranului */
-  if (variant === 2) {
-    return (
-      <section className="relative overflow-hidden bg-white">
-        <div className="grid lg:min-h-[calc(100svh-120px)] lg:grid-cols-2">
-          <div className="flex items-center bg-gradient-to-b from-[#f5f8f2] to-white px-4 py-14 lg:py-20 lg:pl-[max(1rem,calc((100vw-1224px)/2+1rem))] lg:pr-14">
-            <div className="max-w-[600px]">
-              <Intro t={t} locale={locale} />
-            </div>
-          </div>
-          <div className="relative min-h-[460px] overflow-hidden bg-[#121313]">
-            <img src={IMG} alt="ROOTT R" fetchPriority="high" className="absolute inset-0 h-full w-full object-contain" />
-            <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,#0b0c0c_100%)]" />
-            <SeriesTag />
-          </div>
-        </div>
-        <div className="mx-auto max-w-[1224px] px-4 py-10 lg:py-14">
-          <Badges t={t} />
-        </div>
-      </section>
-    );
-  }
-
-  /* Varianta 3: tot primul ecran pe negru, ca la prezentările de implanturi premium */
-  if (variant === 3) {
-    return (
-      <section className="relative overflow-hidden bg-[#0b0c0d] text-white">
-        <div aria-hidden className="pointer-events-none absolute right-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10),transparent_60%)]" />
-        <div aria-hidden className="pointer-events-none absolute -left-40 bottom-[-30%] h-[520px] w-[520px] rounded-full bg-lime/10 blur-[140px]" />
-        <div className="relative mx-auto grid max-w-[1224px] items-center gap-6 px-4 pt-12 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:pt-10">
-          <Intro t={t} locale={locale} dark />
-          <div className="relative mx-auto w-full max-w-[560px]">
-            <div aria-hidden className="absolute inset-[18%] rounded-full bg-[#2a2b2b]/60 blur-3xl" />
-            <img
-              src={IMG}
-              alt="ROOTT R"
-              fetchPriority="high"
-              className="relative w-full"
-              style={{ maskImage: FADE, WebkitMaskImage: FADE }}
-            />
-          </div>
-        </div>
-        <div className="relative mx-auto max-w-[1224px] px-4 pb-14 pt-4 lg:pb-20">
-          <Badges t={t} dark />
-        </div>
-      </section>
-    );
-  }
-
-  /* Varianta 1: fundal luminos, implantul pe un card negru premium */
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#f3f7f0] via-[#f8faf6] to-white">
-      <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full bg-lime/20 blur-[120px]" />
-      <div className="relative mx-auto grid max-w-[1224px] items-center gap-10 px-4 pb-10 pt-12 md:pt-16 lg:grid-cols-[1.1fr_1fr] lg:gap-12 lg:pb-16 lg:pt-20">
-        <Intro t={t} locale={locale} />
-        <div className="relative mx-auto w-full max-w-[500px]">
-          <div aria-hidden className="absolute -inset-6 rounded-[48px] bg-gradient-to-br from-lime/30 via-transparent to-sky/20 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[36px] bg-[#121313] shadow-[0_50px_100px_-40px_rgba(11,13,16,0.75)] ring-1 ring-black/10">
-            <img src={IMG} alt="ROOTT R" fetchPriority="high" className="aspect-[1034/1226] w-full object-cover" />
-            <SeriesTag />
-          </div>
+    <section className="relative overflow-hidden bg-[#0b0c0d] text-white">
+      <div aria-hidden className="pointer-events-none absolute right-[-10%] top-[-20%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10),transparent_60%)]" />
+      <div aria-hidden className="pointer-events-none absolute -left-40 bottom-[-30%] h-[520px] w-[520px] rounded-full bg-lime/10 blur-[140px]" />
+      <div className="relative mx-auto grid max-w-[1224px] items-center gap-6 px-4 pt-12 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:pt-10">
+        <Intro t={t} locale={locale} dark />
+        <div className="relative mx-auto w-full max-w-[560px]">
+          <div aria-hidden className="absolute inset-[18%] rounded-full bg-[#2a2b2b]/60 blur-3xl" />
+          <img
+            src={IMG}
+            alt="ROOTT R"
+            fetchPriority="high"
+            className="relative w-full"
+            style={{ maskImage: FADE, WebkitMaskImage: FADE }}
+          />
         </div>
       </div>
-      <div className="relative mx-auto max-w-[1224px] px-4 pb-14 lg:pb-20">
-        <Badges t={t} />
+      <div className="relative mx-auto max-w-[1224px] px-4 pb-14 pt-4 lg:pb-20">
+        <Badges t={t} dark />
       </div>
     </section>
   );
