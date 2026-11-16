@@ -141,12 +141,13 @@ export default function HomeHero({ t, locale, variant = 1 }: { t: Dictionary["ho
         <div aria-hidden className="pointer-events-none absolute -left-40 bottom-[-30%] h-[520px] w-[520px] rounded-full bg-lime/10 blur-[140px]" />
         <div className="relative mx-auto grid max-w-[1224px] items-center gap-6 px-4 pt-12 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:pt-10">
           <Intro t={t} locale={locale} dark />
-          <div className="relative mx-auto w-full max-w-[520px]">
+          <div className="relative mx-auto w-full max-w-[560px]">
+            <div aria-hidden className="absolute inset-[18%] rounded-full bg-[#2a2b2b]/60 blur-3xl" />
             <img
               src={IMG}
               alt="ROOTT R"
               fetchPriority="high"
-              className="w-full [mask-image:radial-gradient(ellipse_70%_75%_at_50%_48%,#000_55%,transparent_100%)]"
+              className="relative w-full [mask-image:radial-gradient(ellipse_48%_52%_at_50%_46%,#000_62%,transparent_100%)]"
             />
           </div>
         </div>
