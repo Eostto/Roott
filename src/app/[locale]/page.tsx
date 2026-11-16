@@ -11,17 +11,21 @@ import SeoText from "@/components/SeoText";
 
 export default async function HomePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ v?: string }>;
 }) {
   const { locale } = await params;
+  const v = Number((await searchParams).v);
+  const variant = (v === 2 || v === 3 ? v : 1) as 1 | 2 | 3;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
 
   return (
     <>
       <main>
-        <HomeHero t={t.home} locale={locale} />
+        <HomeHero t={t.home} locale={locale} variant={variant} />
         <ProductLines t={t.home} locale={locale} />
         <NewLine t={t.home} locale={locale} />
         <AboutSystem t={t.system} locale={locale} />
